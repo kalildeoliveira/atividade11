@@ -55,7 +55,13 @@ public class Piramide {
 // MÉTODO PÚBLICO TO STRING
 	@Override
 	public String toString() {
-		return "O volume do seu triângulo é = " + volume;
+		StringBuilder builder = new StringBuilder();
+		builder.append("\nVolme do triangulo= ");
+		builder.append(volume);
+		builder.append("\nValor da tinta= ");
+		builder.append(valorTinta);
+		return builder.toString();
+		
 	}
 	
 // OUTROS MÉTODOS
@@ -100,6 +106,11 @@ public class Piramide {
 		double volume = (base/3)*altura; 
 		setVolume(volume);		
 	}
-	
+	public void imprimirResultado() {
+		double volume=getVolume();
+		System.out.printf("Volume do triangulo = ", volume);
+		System.out.println("Valor da tinta = "+getValorTinta());
+		System.out.println("Será preciso comprar = " + ((4.76/volume)/18) + " latas de tinta");
+	}	
 
 }
