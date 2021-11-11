@@ -108,9 +108,10 @@ public class Piramide {
 	}
 	public void imprimirResultado() {
 		double volume=getVolume();
-		System.out.printf("Volume do triangulo = ", volume);
+		double tinta= volume/(18*4.76);
+		System.out.println("Volume do triangulo = " + getVolume());
 		System.out.println("Valor da tinta = "+getValorTinta());
-		System.out.println("Será preciso comprar = " + ((4.76/volume)/18) + " latas de tinta");
+		System.out.println("Será preciso comprar = " + tinta + " latas de tinta");
 	}	
 
 }
